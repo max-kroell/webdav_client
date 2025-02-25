@@ -249,7 +249,7 @@ class WdDio with DioMixin implements Dio {
   }) async {
     // fix auth error
     var pResp = await this.wdOptions(self, path, cancelToken: cancelToken);
-    if (pResp.statusCode != 200) {
+    if ((pResp.statusCode != 200) && (pResp.statusCode != 404)) {
       throw newResponseError(pResp);
     }
 
@@ -291,7 +291,7 @@ class WdDio with DioMixin implements Dio {
   }) async {
     // fix auth error
     var pResp = await this.wdOptions(self, path, cancelToken: cancelToken);
-    if (pResp.statusCode != 200) {
+    if ((pResp.statusCode != 200) && (pResp.statusCode != 404)) {
       throw newResponseError(pResp);
     }
 
@@ -457,7 +457,7 @@ class WdDio with DioMixin implements Dio {
   }) async {
     // fix auth error
     var pResp = await this.wdOptions(self, path, cancelToken: cancelToken);
-    if (pResp.statusCode != 200) {
+    if ((pResp.statusCode != 200) && (pResp.statusCode != 404)) {
       throw newResponseError(pResp);
     }
 
@@ -492,7 +492,7 @@ class WdDio with DioMixin implements Dio {
   }) async {
     // fix auth error
     var pResp = await this.wdOptions(self, path, cancelToken: cancelToken);
-    if (pResp.statusCode != 200) {
+    if ((pResp.statusCode != 200) && (pResp.statusCode != 404)) {
       throw newResponseError(pResp);
     }
 
